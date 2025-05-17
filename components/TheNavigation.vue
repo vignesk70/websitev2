@@ -31,8 +31,8 @@
         <div class="flex items-center sm:hidden">
           <UButton
             icon="i-heroicons-bars-3"
-            color="gray"
-            variant="ghost"
+            color="neutral"
+            variant="subtle"
             @click="isMobileMenuOpen = !isMobileMenuOpen"
           />
         </div>

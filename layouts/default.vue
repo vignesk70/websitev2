@@ -20,14 +20,14 @@
               <li><NuxtLink to="/contact" class="text-gray-400 hover:text-white">Contact</NuxtLink></li>
             </ul>
           </div>
-          <div>
+          <!-- <div>
             <h3 class="text-lg font-semibold mb-4">Services</h3>
             <ul class="space-y-2">
               <li><NuxtLink to="/services/web-development" class="text-gray-400 hover:text-white">Transformation Study</NuxtLink></li>
               <li><NuxtLink to="/services/digital-marketing" class="text-gray-400 hover:text-white">Technology Consulting</NuxtLink></li>
               <li><NuxtLink to="/services/consulting" class="text-gray-400 hover:text-white">Business Consulting</NuxtLink></li>
             </ul>
-          </div>
+          </div> -->
           <div>
             <h3 class="text-lg font-semibold mb-4">Contact</h3>
             <ul class="space-y-2 text-gray-400">
