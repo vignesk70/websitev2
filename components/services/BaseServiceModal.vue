@@ -1,7 +1,7 @@
 <template>
   <div v-if="modelValue" class="fixed inset-0 z-50 overflow-y-auto" aria-labelledby="modal-title" role="dialog" aria-modal="true">
     <!-- Background overlay -->
-    <div class="fixed inset-0  bg-opacity-50 transition-all duration-300" aria-hidden="true" @click="$emit('close')"></div>
+    <div class="fixed inset-0 bg-neutral-600/70 transition-opacity duration-500" aria-hidden="true" @click="$emit('close')"></div>
 
     <!-- Modal panel -->
     <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
