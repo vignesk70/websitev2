@@ -132,7 +132,7 @@ const projects = [
     description: 'Managing the end to end logistics of a company. From the order, delivery, tracking, inventory and production consumption. AI suggestion for planning optimization.',
     image: '/images/projects/logistics.jpg', //Photo by Albin Berlin: https://www.pexels.com/photo/black-sail-ship-on-body-of-water-906982/
     category: { id: 'logistics', name: 'Web Development', color: 'purple' },
-    technologies: ['i-logos-nodejs-icon', 'i-simple-icons-neo4j', 'i-logos-python', 'i-logos-react'],
+    technologies: ['i-logos-python', 'i-logos-react','i-logos-nodejs-icon', 'i-simple-icons-neo4j', ],
     link: '/projects/corporate-redesign'
   },
   {
@@ -159,7 +159,7 @@ const projects = [
     description: 'Custom AI chatbot for enterprise use. Integrate with your existing data and systems.',
     image: '/images/projects/aichatbot.jpg', //Photo by Markus Winkler: https://www.pexels.com/photo/chatgpt-spelled-with-wooden-letter-tiles-on-table-30869075/
     category: { id: 'ai', name: 'Web Development', color: 'green' },
-    technologies: ['i-logos-nodejs-icon', 'i-logos-wordpress-icon'],
+    technologies: ['i-logos-nodejs-icon', 'i-simple-icons-wordpress'],
     link: '/projects/fitness-app'
   }
 ]
