@@ -1,10 +1,10 @@
 <template>
   <div class="bg-[url('/images/indexbackground.jpg')] bg-cover bg-center">
     <!-- Hero Section -->
-    <section class="relative  bg-opacity-50 backdrop-blur-sm">
+    <section class="relative bg-opacity-50 backdrop-blur-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
         <div class="text-center">
-          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+          <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 dark:text-gray-100 sm:text-5xl md:text-6xl">
             <span class="block text-neutral-300">Welcome to</span>
             <span class="block text-white">Tunjang Jaya Graftek</span>
           </h1>
@@ -37,14 +37,14 @@
     </section>
 
     <!-- Features Section -->
-    <section class="py-12 bg-gray-50 ">
+    <section class="py-12 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center">
-          <h2 class="text-base text-primary-500 font-semibold tracking-wide uppercase">Features</h2>
-          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+          <h2 class="text-base text-primary-500 dark:text-primary-400 font-semibold tracking-wide uppercase">Features</h2>
+          <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
             Your partner in business transformation
           </p>
-          <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
+          <p class="mt-4 max-w-2xl text-xl text-gray-500 dark:text-gray-400 lg:mx-auto">
             Our comprehensive solutions are designed to digitalize your business and succeed in today's competitive market.
           </p>
         </div>
@@ -52,12 +52,12 @@
         <div class="mt-10">
           <div class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
             <div v-for="(feature, index) in features" :key="index" class="relative">
-              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+              <div class="absolute flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 dark:bg-primary-600 text-white">
                 <UIcon :name="feature.icon" class="h-6 w-6" />
               </div>
               <div class="ml-16">
-                <h3 class="text-lg leading-6 font-medium text-gray-900">{{ feature.title }}</h3>
-                <p class="mt-2 text-base text-gray-500">{{ feature.description }}</p>
+                <h3 class="text-lg leading-6 font-medium text-gray-900 dark:text-white">{{ feature.title }}</h3>
+                <p class="mt-2 text-base text-gray-500 dark:text-gray-400">{{ feature.description }}</p>
               </div>
             </div>
           </div>
@@ -90,4 +90,4 @@ const features = [
     icon: 'i-heroicons-globe-alt'
   }
 ]
-</script> 
+</script>

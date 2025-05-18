@@ -15,10 +15,10 @@
     </section>
 
     <!-- Services Grid -->
-    <section class="py-12 bg-gray-50">
+    <section class="py-12 bg-gray-50 dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div v-for="(service, index) in services" :key="index" class="bg-white overflow-hidden shadow rounded-lg">
+          <div v-for="(service, index) in services" :key="index" class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
             <div class="p-6">
               <div class="flex items-center">
                 <div class="flex-shrink-0">
@@ -27,10 +27,10 @@
                   </span>
                 </div>
                 <div class="ml-4">
-                  <h3 class="text-lg font-medium text-gray-900">{{ service.title }}</h3>
+                  <h3 class="text-lg font-medium text-gray-900 dark:text-white">{{ service.title }}</h3>
                 </div>
               </div>
-              <p class="mt-4 text-base text-gray-500">{{ service.description }}</p>
+              <p class="mt-4 text-base text-gray-500 dark:text-gray-400">{{ service.description }}</p>
               <div class="mt-6">
                 <UButton
                   color="primary"

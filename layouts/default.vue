@@ -17,6 +17,7 @@
               <li><NuxtLink to="/" class="text-gray-400 hover:text-white">Home</NuxtLink></li>
               <li><NuxtLink to="/about" class="text-gray-400 hover:text-white">About</NuxtLink></li>
               <li><NuxtLink to="/services" class="text-gray-400 hover:text-white">Services</NuxtLink></li>
+              <li><NuxtLink to="/projects" class="text-gray-400 hover:text-white">Projects</NuxtLink></li>
               <li><NuxtLink to="/contact" class="text-gray-400 hover:text-white">Contact</NuxtLink></li>
             </ul>
           </div>

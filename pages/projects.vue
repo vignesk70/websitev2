@@ -15,7 +15,7 @@
     </section>
 
     <!-- Projects Grid -->
-    <section class="py-12 bg-gray-50">
+    <section class="py-12 bg-gray-50 dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Filter Categories -->
         <div class="flex flex-wrap justify-center gap-4 mb-12">
@@ -35,7 +35,7 @@
           <div
             v-for="project in filteredProjects"
             :key="project.id"
-            class="bg-white overflow-hidden shadow rounded-lg transition-transform duration-300 hover:scale-105"
+            class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg transition-transform duration-300 hover:scale-105"
           >
             <div class="aspect-w-16 aspect-h-9">
               <img
@@ -46,17 +46,17 @@
             </div>
             <div class="p-6">
               <div class="flex items-center justify-between">
-                <h3 class="text-lg font-medium text-gray-900">{{ project.title }}</h3>
+                <h3 class="text-lg font-medium text-gray-900 dark:text-white">{{ project.title }}</h3>
                 <UBadge :color="project.category.color">{{ project.category.name }}</UBadge>
               </div>
-              <p class="mt-2 text-gray-500">{{ project.description }}</p>
+              <p class="mt-2 text-gray-500 dark:text-gray-400">{{ project.description }}</p>
               <div class="mt-4 flex items-center justify-between">
                 <div class="flex items-center space-x-4">
                   <UIcon
                     v-for="tech in project.technologies"
                     :key="tech"
                     :name="tech"
-                    class="h-5 w-5 text-gray-400"
+                    class="h-5 w-5 text-gray-400 dark:text-gray-500"
                   />
                 </div>
                 <!-- <UButton
