@@ -9,14 +9,14 @@ export default defineEventHandler(async (event) => {
     secure: true,
     auth: {
       user: 'info@tunjangjaya.com',
-      pass: 'DARBJx20FS5S'
+      pass: process.env.EMAIL_PASSWORD
     }
   });
 
   const mailOptions = {
     from: 'info@tunjangjaya.com',
     to: 'info@tunjangjaya.com',
-    subject: 'New Contact Form Submission '+new Date().toISOString(),
+    subject: 'New Contact Form Submission '+new Date().toLocaleString(),
     text: `
       Name: ${name}
       Email: ${email}
