@@ -13,7 +13,7 @@
           </div>
           <div>
             <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-            <ul class="space-y-2">
+            <ul class="space-y-2 grid grid-cols-2">
               <li><NuxtLink to="/" class="text-gray-400 hover:text-white">Home</NuxtLink></li>
               <li><NuxtLink to="/about" class="text-gray-400 hover:text-white">About</NuxtLink></li>
               <li><NuxtLink to="/services" class="text-gray-400 hover:text-white">Services</NuxtLink></li>
