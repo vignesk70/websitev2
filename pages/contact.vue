@@ -88,7 +88,7 @@
     </section>
 
     <!-- Map Section -->
-    <section class="py-12 bg-white">
+    <section class="py-12 bg-white dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="aspect-w-16 aspect-h-9">
           <iframe
