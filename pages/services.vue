@@ -102,37 +102,37 @@ const closeModal = () => {
 const services = [
   {
     title: 'Transformation Study',
-    description: 'Let us engage your teams to find your pain points and define solutions.',
+    description: 'Our expert team collaborates with your organization to identify challenges, develop strategic roadmaps, and implement transformative solutions.',
     icon: 'i-heroicons-briefcase',
     component: 'TransformationStudyModal'
   },
   {
     title: 'Technology Consulting',
-    description: 'We understand the tools and technolgoies to integrate into your business.',
+    description: 'Our deep technical expertise helps organizations navigate and implement the right technologies to drive efficiency, innovation, and competitive advantage.',
     icon: 'i-heroicons-cog-8-tooth',
     component: 'TechnologyConsultingModal'
   },
   {
     title: 'Business Consulting',
-    description: 'Change management can be challenging, let us help you.',
+    description: 'We help organizations navigate complex business transformations through strategic planning, process optimization, and effective change management to achieve sustainable growth and operational excellence.',
     icon: 'i-heroicons-chart-bar',
     component: 'BusinessConsultingModal'
   },
   {
     title: 'Cloud Solutions',
-    description: 'Moving to the cloud can be daunting, let us find the right tools for you.',
+    description: 'We guide organizations through seamless cloud migration, leveraging our expertise to architect scalable solutions, optimize costs, and enhance security while ensuring business continuity.',
     icon: 'i-heroicons-cloud',
     component: 'CloudSolutionsModal'
   },
   {
     title: 'Software Development',
-    description: 'Whatever your requirements, web, mobile or desktop, we can architect and build it.',
+    description: 'Leveraging our global network of expert developers, we deliver custom web, mobile, and desktop solutions tailored to your unique business needs, ensuring scalable and innovative software that drives your success.',
     icon: 'i-heroicons-device-phone-mobile',
     component: 'SoftwareDevelopmentModal'
   },
   {
     title: 'UI/UX Design',
-    description: 'User-centered design solutions that create engaging and intuitive experiences.',
+    description: 'Our expert designers combine deep software development knowledge with user-centered design principles to create intuitive, engaging digital experiences that drive user satisfaction and business success.',
     icon: 'i-heroicons-paint-brush',
     component: 'UiUxDesignModal'
   }
