@@ -170,4 +170,22 @@ const filteredProjects = computed(() => {
   }
   return projects.filter(project => project.category.id === selectedCategory.value)
 })
+
+useHead({
+  title: 'Projects - Project Case Studies',
+  meta: [
+    { name: 'description', content: 'business transformation, technology consulting, cloud solutions, software development, and UI/UX design. digital transformation journey in Malaysia.' },
+    { name: 'keywords', content: 'IT services Malaysia, business transformation, technology consulting, cloud solutions, software development, UI/UX design, digital transformation, web development, mobile apps, Kuala Lumpur IT company' },
+    { property: 'og:title', content: 'Our Services - Tunjang Jaya Graftek | IT Solutions Malaysia' },
+    { property: 'og:description', content: 'Comprehensive IT services including business transformation, technology consulting, cloud solutions, software development, and UI/UX design.' },
+    { property: 'og:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' },
+    { property: 'og:url', content: 'https://tunjangjaya.com/services' },
+    { name: 'twitter:title', content: 'Our Services - Tunjang Jaya Graftek | IT Solutions Malaysia' },
+    { name: 'twitter:description', content: 'Comprehensive IT services including business transformation, technology consulting, cloud solutions, software development, and UI/UX design.' },
+    { name: 'twitter:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tunjangjaya.com/services' }
+  ]
+})
 </script> 

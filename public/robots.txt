@@ -1,2 +1,19 @@
 User-Agent: *
-Disallow:
+Allow: /
+
+# Sitemap
+Sitemap: https://tunjangjaya.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block access to admin areas (if any)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /.nuxt/
+
+# Allow all other content
+Allow: /images/
+Allow: /css/
+Allow: /js/

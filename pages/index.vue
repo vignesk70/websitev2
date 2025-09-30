@@ -68,6 +68,70 @@
 </template>
 
 <script setup>
+// SEO Meta Tags
+useHead({
+  title: 'Home - Business Transformation & Technology Solutions',
+  meta: [
+    { name: 'description', content: 'Leading provider of business transformation, technology consulting, cloud solutions, and software development services in Malaysia.' },
+    { name: 'keywords', content: 'business transformation Malaysia, technology consulting Kuala Lumpur, cloud solutions, software development, digital transformation, IT services, web development, mobile apps' },
+    { property: 'og:title', content: 'Tunjang Jaya Graftek - Business Transformation & Technology Solutions' },
+    { property: 'og:description', content: 'Transform your business with expert technology consulting, cloud solutions, and software development services in Malaysia.' },
+    { property: 'og:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' },
+    { property: 'og:url', content: 'https://tunjangjaya.com' },
+    { name: 'twitter:title', content: 'Tunjang Jaya Graftek - Business Transformation & Technology Solutions' },
+    { name: 'twitter:description', content: 'Transform your business with expert technology consulting, cloud solutions, and software development services in Malaysia.' },
+    { name: 'twitter:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tunjangjaya.com' }
+  ]
+})
+
+// Structured Data for Organization
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Tunjang Jaya Graftek Sdn Bhd",
+        "alternateName": "Tunjang Jaya Graftek",
+        "url": "https://tunjangjaya.com",
+        "logo": "https://tunjangjaya.com/images/logo.png",
+        "description": "Leading provider of business transformation, technology consulting, cloud solutions, and software development services in Malaysia.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Suite 33-01, Jalan Bukit Bintang",
+          "addressLocality": "Kuala Lumpur",
+          "postalCode": "50470",
+          "addressCountry": "MY"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+6018-3445471",
+          "contactType": "customer service",
+          "email": "info@tunjangjaya.com"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/tunjang-jaya-graftek"
+        ],
+        "foundingDate": "2019",
+        "numberOfEmployees": "10-50",
+        "industry": "Information Technology",
+        "services": [
+          "Business Transformation",
+          "Technology Consulting",
+          "Cloud Solutions",
+          "Software Development",
+          "UI/UX Design",
+          "Digital Transformation"
+        ]
+      })
+    }
+  ]
+})
+
 const features = [
   {
     title: 'Professional Services',

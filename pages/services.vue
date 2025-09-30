@@ -88,6 +88,104 @@ import CloudSolutionsModal from '@/components/services/CloudSolutionsModal.vue'
 import SoftwareDevelopmentModal from '@/components/services/SoftwareDevelopmentModal.vue'
 import UiUxDesignModal from '@/components/services/UiUxDesignModal.vue'
 
+// SEO Meta Tags
+useHead({
+  title: 'Services - Business Transformation & Technology Solutions',
+  meta: [
+    { name: 'description', content: 'business transformation, technology consulting, cloud solutions, software development, and UI/UX design. digital transformation journey in Malaysia.' },
+    { name: 'keywords', content: 'IT services Malaysia, business transformation, technology consulting, cloud solutions, software development, UI/UX design, digital transformation, web development, mobile apps, Kuala Lumpur IT company' },
+    { property: 'og:title', content: 'Our Services - Tunjang Jaya Graftek | IT Solutions Malaysia' },
+    { property: 'og:description', content: 'Comprehensive IT services including business transformation, technology consulting, cloud solutions, software development, and UI/UX design.' },
+    { property: 'og:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' },
+    { property: 'og:url', content: 'https://tunjangjaya.com/services' },
+    { name: 'twitter:title', content: 'Our Services - Tunjang Jaya Graftek | IT Solutions Malaysia' },
+    { name: 'twitter:description', content: 'Comprehensive IT services including business transformation, technology consulting, cloud solutions, software development, and UI/UX design.' },
+    { name: 'twitter:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tunjangjaya.com/services' }
+  ]
+})
+
+// Structured Data for Services
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "IT Services and Business Transformation",
+        "description": "Comprehensive IT services including business transformation, technology consulting, cloud solutions, software development, and UI/UX design.",
+        "provider": {
+          "@type": "Organization",
+          "name": "Tunjang Jaya Graftek Sdn Bhd",
+          "url": "https://tunjangjaya.com"
+        },
+        "serviceType": "Information Technology Services",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Malaysia"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "IT Services",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Transformation Study",
+                "description": "Expert team collaboration to identify challenges, develop strategic roadmaps, and implement transformative solutions."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Technology Consulting",
+                "description": "Deep technical expertise to help organizations navigate and implement the right technologies."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Business Consulting",
+                "description": "Strategic planning, process optimization, and effective change management for sustainable growth."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Cloud Solutions",
+                "description": "Seamless cloud migration, scalable solutions, cost optimization, and enhanced security."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Software Development",
+                "description": "Custom web, mobile, and desktop solutions tailored to unique business needs."
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "UI/UX Design",
+                "description": "User-centered design principles to create intuitive, engaging digital experiences."
+              }
+            }
+          ]
+        }
+      })
+    }
+  ]
+})
+
 const activeModal = ref(null)
 
 const openModal = (component) => {

@@ -81,6 +81,56 @@
 </template>
 
 <script setup>
+// SEO Meta Tags
+useHead({
+  title: 'About Us - Expert IT Team with 100+ Years Experience',
+  meta: [
+    { name: 'description', content: '100 years combined experience in software development, IT infrastructure, and business transformation across various industries in Malaysia.' },
+    { name: 'keywords', content: 'about Tunjang Jaya Graftek, IT team Malaysia, experienced software developers, IT infrastructure experts, business transformation consultants, Kuala Lumpur IT company' },
+    { property: 'og:title', content: 'About Us - Tunjang Jaya Graftek | Expert IT Team Malaysia' },
+    { property: 'og:description', content: 'Meet our experienced IT team with over 100 years combined experience in software development, IT infrastructure, and business transformation.' },
+    { property: 'og:image', content: 'https://tunjangjaya.com/images/about-company.jpg' },
+    { property: 'og:url', content: 'https://tunjangjaya.com/about' },
+    { name: 'twitter:title', content: 'About Us - Tunjang Jaya Graftek | Expert IT Team Malaysia' },
+    { name: 'twitter:description', content: 'Meet our experienced IT team with over 100 years combined experience in software development, IT infrastructure, and business transformation.' },
+    { name: 'twitter:image', content: 'https://tunjangjaya.com/images/about-company.jpg' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tunjangjaya.com/about' }
+  ]
+})
+
+// Structured Data for About Page
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "About Tunjang Jaya Graftek",
+        "description": "Learn about our experienced IT team with over 100 years combined experience in software development, IT infrastructure, and business transformation.",
+        "url": "https://tunjangjaya.com/about",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Tunjang Jaya Graftek Sdn Bhd",
+          "description": "We are a team of experienced professionals who have collectively more than 100 years of experience in the IT industry.",
+          "foundingDate": "2019",
+          "numberOfEmployees": "10-50",
+          "industry": "Information Technology",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Suite 33-01, Jalan Bukit Bintang",
+            "addressLocality": "Kuala Lumpur",
+            "postalCode": "50470",
+            "addressCountry": "MY"
+          }
+        }
+      })
+    }
+  ]
+})
+
 const values = [
   {
     title: 'Innovation',

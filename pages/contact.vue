@@ -106,6 +106,67 @@
 </template>
 
 <script setup>
+// SEO Meta Tags
+useHead({
+  title: 'Contact Us - Get in Touch with Tunjang Jaya Graftek',
+  meta: [
+    { name: 'description', content: 'transformation, cloud solutions, and software development services. Kuala Lumpur, Malaysia. Call +6018-3445471 or email info@tunjangjaya.com' },
+    { name: 'keywords', content: 'contact Tunjang Jaya Graftek, IT consulting Malaysia, business transformation contact, technology consulting Kuala Lumpur, software development contact, cloud solutions Malaysia' },
+    { property: 'og:title', content: 'Contact Us - Tunjang Jaya Graftek | IT Solutions Malaysia' },
+    { property: 'og:description', content: 'Get in touch with our expert IT team for business transformation, technology consulting, cloud solutions, and software development services.' },
+    { property: 'og:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' },
+    { property: 'og:url', content: 'https://tunjangjaya.com/contact' },
+    { name: 'twitter:title', content: 'Contact Us - Tunjang Jaya Graftek | IT Solutions Malaysia' },
+    { name: 'twitter:description', content: 'Get in touch with our expert IT team for business transformation, technology consulting, cloud solutions, and software development services.' },
+    { name: 'twitter:image', content: 'https://tunjangjaya.com/images/indexbackground.jpg' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://tunjangjaya.com/contact' }
+  ]
+})
+
+// Structured Data for Contact Page
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ContactPage",
+        "name": "Contact Tunjang Jaya Graftek",
+        "description": "Get in touch with our expert IT team for business transformation, technology consulting, cloud solutions, and software development services.",
+        "url": "https://tunjangjaya.com/contact",
+        "mainEntity": {
+          "@type": "Organization",
+          "name": "Tunjang Jaya Graftek Sdn Bhd",
+          "url": "https://tunjangjaya.com",
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "telephone": "+6018-3445471",
+              "contactType": "customer service",
+              "email": "info@tunjangjaya.com",
+              "availableLanguage": ["English", "Malay"]
+            }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Suite 33-01, Jalan Bukit Bintang",
+            "addressLocality": "Kuala Lumpur",
+            "postalCode": "50200",
+            "addressCountry": "MY"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "3.1390",
+            "longitude": "101.6869"
+          }
+        }
+      })
+    }
+  ]
+})
+
 const form = ref({
   name: '',
   email: '',
