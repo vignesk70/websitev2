@@ -19,6 +19,7 @@
               <li><NuxtLink to="/services" class="text-gray-400 hover:text-white">Services</NuxtLink></li>
               <li><NuxtLink to="/projects" class="text-gray-400 hover:text-white">Projects</NuxtLink></li>
               <li><NuxtLink to="/contact" class="text-gray-400 hover:text-white">Contact</NuxtLink></li>
+              <li><NuxtLink to="/privacy" class="text-gray-400 hover:text-white">Privacy</NuxtLink></li>
             </ul>
           </div>
           <!-- <div>
