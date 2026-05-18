@@ -4,10 +4,10 @@
     <section class="relative  py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h1 class="text-4xl font-extrabold text-white sm:text-5xl">
+          <h1 class="motion-enter text-4xl font-extrabold text-white sm:text-5xl">
             Our Projects
           </h1>
-          <p class="mt-4 text-xl text-gray-200">
+          <p class="motion-enter motion-delay-1 mt-4 text-xl text-gray-200">
             Explore our successful projects and case studies
           </p>
         </div>
@@ -18,12 +18,13 @@
     <section class="py-12 bg-gray-50 dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Filter Categories -->
-        <div class="flex flex-wrap justify-center gap-4 mb-12">
+        <div class="mb-12 flex flex-wrap justify-center gap-4" v-reveal>
           <UButton
             v-for="category in categories"
             :key="category.id"
             :color="selectedCategory === category.id ? 'primary' : 'neutral'"
             variant="subtle"
+            class="interactive-button"
             @click="selectedCategory = category.id"
           >
             {{ category.name }}
@@ -31,17 +32,17 @@
         </div>
 
         <!-- Projects Grid -->
-        <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <TransitionGroup name="project-list" tag="div" class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           <div
             v-for="project in filteredProjects"
             :key="project.id"
-            class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg transition-transform duration-300 hover:scale-105"
+            class="group overflow-hidden rounded-lg bg-white shadow hover-lift dark:bg-gray-800"
           >
             <div class="aspect-w-16 aspect-h-9">
               <img
                 :src="project.image"
                 :alt="project.title"
-                class="object-cover w-full h-48"
+                class="h-48 w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </div>
             <div class="p-6">
@@ -69,13 +70,13 @@
               </div>
             </div>
           </div>
-        </div>
+        </TransitionGroup>
       </div>
     </section>
 
     <!-- Call to Action -->
     <section class="bg-primary-500">
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between" v-reveal>
         <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           <span class="block">Ready to start your project?</span>
           <span class="block text-primary-100">Let's work together.</span>
@@ -86,6 +87,7 @@
               to="/contact"
               color="white"
               size="lg"
+              class="interactive-button"
             >
               Get in touch
             </UButton>

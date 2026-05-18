@@ -9,4 +9,228 @@
   --font-playfair: 'Playfair Display', serif;
   --color-primary-500: #00C16A;
   --color-secondary-500: #2563eb;
-} 
+  --ease-emphasized: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes fade-up-in {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 24px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fade-in-soft {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(0, -14px, 0) scale(1.03);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 0.85;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #082f49;
+}
+
+.motion-enter {
+  opacity: 0;
+  animation: fade-up-in 0.8s var(--ease-emphasized) forwards;
+}
+
+.motion-enter-soft {
+  opacity: 0;
+  animation: fade-in-soft 0.8s ease forwards;
+}
+
+.motion-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.motion-delay-2 {
+  animation-delay: 0.16s;
+}
+
+.motion-delay-3 {
+  animation-delay: 0.24s;
+}
+
+.motion-delay-4 {
+  animation-delay: 0.32s;
+}
+
+.motion-float {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+.motion-glow {
+  animation: pulse-glow 5s ease-in-out infinite;
+}
+
+.reveal-on-scroll {
+  --reveal-delay: 0ms;
+  --reveal-distance: 24px;
+  opacity: 0;
+  transform: translate3d(0, var(--reveal-distance), 0);
+  transition:
+    opacity 0.7s var(--ease-emphasized) var(--reveal-delay),
+    transform 0.7s var(--ease-emphasized) var(--reveal-delay);
+  will-change: transform, opacity;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.hover-lift {
+  transition:
+    transform 0.35s var(--ease-emphasized),
+    box-shadow 0.35s var(--ease-emphasized),
+    border-color 0.35s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px -24px rgba(15, 23, 42, 0.45);
+}
+
+.hover-tilt-icon {
+  transition: transform 0.35s var(--ease-emphasized);
+}
+
+.group:hover .hover-tilt-icon {
+  transform: translateY(-2px) scale(1.06) rotate(-4deg);
+}
+
+.interactive-button {
+  transition:
+    transform 0.24s var(--ease-emphasized),
+    box-shadow 0.24s var(--ease-emphasized),
+    filter 0.24s ease;
+}
+
+.interactive-button:hover {
+  transform: translateY(-2px);
+  filter: saturate(1.06);
+}
+
+.interactive-button:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.nav-fade-enter-active,
+.nav-fade-leave-active {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s var(--ease-emphasized);
+}
+
+.nav-fade-enter-from,
+.nav-fade-leave-to {
+  opacity: 0;
+  transform: translateY(-8px);
+}
+
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s var(--ease-emphasized);
+}
+
+.page-fade-enter-from,
+.page-fade-leave-to {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.modal-shell-enter-active .modal-backdrop,
+.modal-shell-leave-active .modal-backdrop {
+  transition: opacity 0.28s ease;
+}
+
+.modal-shell-enter-active .modal-panel,
+.modal-shell-leave-active .modal-panel {
+  transition:
+    opacity 0.32s ease,
+    transform 0.32s var(--ease-emphasized);
+}
+
+.modal-shell-enter-from .modal-backdrop,
+.modal-shell-leave-to .modal-backdrop {
+  opacity: 0;
+}
+
+.modal-shell-enter-from .modal-panel,
+.modal-shell-leave-to .modal-panel {
+  opacity: 0;
+  transform: translateY(18px) scale(0.97);
+}
+
+.project-list-move,
+.project-list-enter-active,
+.project-list-leave-active {
+  transition: all 0.35s var(--ease-emphasized);
+}
+
+.project-list-enter-from,
+.project-list-leave-to {
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.project-list-leave-active {
+  position: absolute;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal-on-scroll,
+  .motion-enter,
+  .motion-enter-soft {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

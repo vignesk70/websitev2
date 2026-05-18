@@ -4,10 +4,10 @@
     <section class="relative py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h1 class="text-4xl font-extrabold text-white sm:text-5xl">
+          <h1 class="motion-enter text-4xl font-extrabold text-white sm:text-5xl">
             About Us
           </h1>
-          <p class="mt-4 text-xl text-gray-200">
+          <p class="motion-enter motion-delay-1 mt-4 text-xl text-gray-200">
             Learn more about our company and our mission
           </p>
         </div>
@@ -18,7 +18,7 @@
     <section class="py-12 bg-gray-50 dark:bg-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:grid lg:grid-cols-2 lg:gap-8">
-          <div>
+          <div v-reveal>
             <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
               Our Story
             </h2>
@@ -32,11 +32,11 @@
               We believe in creating lasting partnerships with our clients, understanding their unique challenges, and delivering solutions that drive real business value.
             </p>
           </div>
-          <div class="mt-8 lg:mt-0">
-            <div class="aspect-w-5 aspect-h-3 rounded-lg overflow-hidden">
+          <div class="mt-8 lg:mt-0" v-reveal="{ delay: 120 }">
+            <div class="aspect-w-5 aspect-h-3 overflow-hidden rounded-lg hover-lift">
               <!-- https://unsplash.com/photos/men-sitting-in-front-of-their-laptop-computer-MChSQHxGZrQ?utm_content=creditShareLink&utm_medium=referral&utm_source=unsplash -->
               <img
-                class="h-[26rem] w-full object-cover"
+                class="h-[26rem] w-full object-cover transition-transform duration-700 hover:scale-105"
                 src="/images/about-company.jpg"
                 alt="Company office"
               />
@@ -49,7 +49,7 @@
     <!-- Values Section -->
     <section class="py-12 bg-white dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center">
+        <div class="text-center" v-reveal>
           <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">
             Our Values
           </h2>
@@ -60,11 +60,11 @@
 
         <div class="mt-10">
           <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            <div v-for="(value, index) in values" :key="index" class="pt-6">
-              <div class="flow-root bg-gray-50 dark:bg-gray-800 rounded-lg px-6 pb-8">
+            <div v-for="(value, index) in values" :key="index" v-reveal="{ delay: index * 90 }" class="group pt-6">
+              <div class="flow-root rounded-lg bg-gray-50 px-6 pb-8 hover-lift dark:bg-gray-800">
                 <div class="-mt-6">
                   <div>
-                    <span class="inline-flex items-center justify-center p-3 bg-primary-500 dark:bg-primary-600 rounded-md shadow-lg">
+                    <span class="hover-tilt-icon inline-flex items-center justify-center rounded-md bg-primary-500 p-3 shadow-lg shadow-primary-500/20 dark:bg-primary-600">
                       <UIcon :name="value.icon" class="h-6 w-6 text-white" />
                     </span>
                   </div>

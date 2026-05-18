@@ -4,10 +4,10 @@
     <section class="relative  py-16">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center">
-          <h1 class="text-4xl font-extrabold text-white sm:text-5xl">
+          <h1 class="motion-enter text-4xl font-extrabold text-white sm:text-5xl">
             Our Services
           </h1>
-          <p class="mt-4 text-xl text-gray-200">
+          <p class="motion-enter motion-delay-1 mt-4 text-xl text-gray-200">
             Range of services to help you on your journey 
           </p>
         </div>
@@ -18,11 +18,16 @@
     <section class="py-12 bg-gray-50 dark:bg-gray-900">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          <div v-for="(service, index) in services" :key="index" class="bg-white dark:bg-gray-800 overflow-hidden shadow rounded-lg">
+          <div
+            v-for="(service, index) in services"
+            :key="index"
+            v-reveal="{ delay: index * 80 }"
+            class="group overflow-hidden rounded-lg bg-white shadow hover-lift dark:bg-gray-800"
+          >
             <div class="p-6">
               <div class="flex items-center">
                 <div class="flex-shrink-0">
-                  <span class="inline-flex items-center justify-center h-12 w-12 rounded-md bg-primary-500 text-white">
+                  <span class="hover-tilt-icon inline-flex h-12 w-12 items-center justify-center rounded-md bg-primary-500 text-white shadow-lg shadow-primary-500/20">
                     <UIcon :name="service.icon" class="h-6 w-6" />
                   </span>
                 </div>
@@ -35,6 +40,7 @@
                 <UButton
                   color="primary"
                   variant="ghost"
+                  class="interactive-button"
                   @click="openModal(service.component)"
                 >
                   Learn more
@@ -48,7 +54,7 @@
 
     <!-- Call to Action -->
     <section class="bg-primary-500">
-      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between">
+      <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 lg:flex lg:items-center lg:justify-between" v-reveal>
         <h2 class="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
           <span class="block">Ready to get started?</span>
           <span class="block text-primary-100">Contact us today.</span>
@@ -59,6 +65,7 @@
               to="/contact"
               color="white"
               size="lg"
+              class="interactive-button"
             >
               Get in touch
             </UButton>
